@@ -10,7 +10,7 @@ Stereo right channel to mono:</br>
  - <code>mono</code> is output channel layout or number of channels. Alternatively you could use <code>1</code> instead of <code>mono</code>.</br>
  - <code>FC=FR</code> create the Front Center channel of the output from the Front Right of the input.</br>
  - <code>c0=c1</code> is the same as the above in this case: create the first (and only) channel of the mono output (<code>c0</code>) from the second channel (<code>c1</code>) of the input.</br>
- - If you want the left channel instead use <code>FC=FL</code> or <code>c0=c0</code>.</br>
+ - If you want the left channel instead use <code>FC=FL</code> or <code>c0=c0</code>.
  </br>
 That said, the command to extract one audio channel from video file with given start and stop time:</br>
 <code>fmpeg -y -i ./input.mkv -ss 00:26:00.50 -to 00:26:05.11 -ab 320k -ar 44100 -ac 1 -vn ./audio.wav</code></br>
