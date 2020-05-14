@@ -1,3 +1,4 @@
+## FFMPEG basics
 ffmpeg command to extract audio signal from video file</br>
 <code>ffmpeg -i file.mkv -ss 00:00:20 -to 00:00:40 -c copy file-2.mkv</code></br>
 <code>ffmpeg -i test.mp4 -ab 160k -ac 2 -ar 44100 -vn audio.wav</code></br>
