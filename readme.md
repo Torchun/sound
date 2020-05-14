@@ -17,8 +17,8 @@ Stereo right channel to mono:</br>
  </br>
 <code>fmpeg -y -i ./input.mkv -ss 00:26:00.50 -to 00:26:05.11 -ab 320k -ar 44100 -ac 1 -vn ./audio.wav</code></br>
 </br>
-Where:</br>
- - <code>-ss</code> start time 00:26:00.50 </br>
+ Where:</br>
+ <code>-ss</code> start time 00:26:00.50 </br>
  - <code>-to</code> end time 00:26:05.11 </br>
  - <code>-ab 320k</code> audio bitrate 320k</br>
  - <code>-ar 44100</code> audio sampling rate 44100, amplitude samples per second</br>
