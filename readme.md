@@ -13,7 +13,7 @@ Stereo right channel to mono:</br>
  - If you want the left channel instead use <code>FC=FL</code> or <code>c0=c0</code>.
 
 That said, the command to extract one audio channel from video file with given start and stop time:</br>
-    <code>fmpeg -y -i ./input.mkv -ss 00:26:00.50 -to 00:26:05.11 -ab 320k -ar 44100 -ac 1 -vn ./audio.wav</code></br>
+	<code>ffmpeg -y -i ./input.mkv -ss 00:26:00.50 -to 00:26:05.11 -ab 320k -ar 44100 -ac 1 -vn ./audio.wav</code></br>
 Where:
  - <code>-ss</code> start time 00:26:00.50 </br>
  - <code>-to</code> end time 00:26:05.11 </br>
