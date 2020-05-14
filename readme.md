@@ -14,7 +14,7 @@ Stereo right channel to mono:</br>
 
 That said, the command to extract one audio channel from video file with given start and stop time:</br>
 <code>fmpeg -y -i ./input.mkv -ss 00:26:00.50 -to 00:26:05.11 -ab 320k -ar 44100 -ac 1 -vn ./audio.wav</code></br>
-Where:</br>
+Where:
  - <code>-ss</code> start time 00:26:00.50 </br>
  - <code>-to</code> end time 00:26:05.11 </br>
  - <code>-ab 320k</code> audio bitrate 320k</br>
