@@ -7,21 +7,20 @@ if [ $# -eq 0 ]; then
 fi
 INPUT=$1
 OUTPUT=$2
-SECONDS=$3
 VIDEO=`ls ${INPUT}/*`
 piece_count=0
 for video in $VIDEO
 do
   duration=$( ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 $video )
-  SEQ=$( seq 0 $SECONDS $duration )
+  SEQ=$( seq 0 $3 $duration )
   echo $video
   echo $duration
   echo $SEQ
-  for piece in $SEQ
-  do
-    $(time ffmpeg -v quiet -y -i ${video} -vcodec copy -acodec copy -ss ${piece} -t ${SECONDS} ./${OUTPUT}/${piece_count}_${piece}.mkv)
-    piece_count=$(( piece_count + 1 ))
-  done
+#  for piece in $SEQ
+#  do
+#    $(time ffmpeg -v quiet -y -i ${video} -vcodec copy -acodec copy -ss ${piece} -t $3 ./${OUTPUT}/${piece_count}_${piece}.mkv)
+#    piece_count=$(( piece_count + 1 ))
+#  done
 done
   
  
