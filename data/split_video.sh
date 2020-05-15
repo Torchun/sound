@@ -16,11 +16,11 @@ do
   echo $video
   echo $duration
   echo $SEQ
-#  for piece in $SEQ
-#  do
-#    $(time ffmpeg -v quiet -y -i ${video} -vcodec copy -acodec copy -ss ${piece} -t $3 ./${OUTPUT}/${piece_count}_${piece}.mkv)
-#    piece_count=$(( piece_count + 1 ))
-#  done
+  for piece in $SEQ
+  do
+    $(time ffmpeg -v quiet -y -i ${video} -vcodec copy -acodec copy -ss ${piece} -t $3 ./${OUTPUT}/${piece_count}_${piece}.mkv)
+    piece_count=$(( piece_count + 1 ))
+  done
 done
   
  
