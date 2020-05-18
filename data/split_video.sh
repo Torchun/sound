@@ -8,7 +8,8 @@ fi
 INPUT=$1
 OUTPUT=$2
 VIDEO=`ls ${INPUT}/*`
-piece_count=0
+# piece_count=0
+piece_count=606
 for video in $VIDEO
 do
   duration=$( ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 $video )
